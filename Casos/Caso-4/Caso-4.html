@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.0.3  (Linux)">
+	<META NAME="AUTHOR" CONTENT=" ">
+	<META NAME="CREATED" CONTENT="20030327;17173600">
+	<META NAME="CHANGED" CONTENT="20030529;19203100">
+</HEAD>
+<BODY LANG="en-US">
+<P><FONT FACE="Arial"><B>Firewalling/NAT</B></FONT></P>
+<P><FONT FACE="Arial">Enunciado</FONT></P>
+<P><FONT FACE="Arial">Una organizaci&oacute;n con alcance nacional ha
+contratado enlaces para sus 6 sucursales con la idea de armar una red
+Wan Nacional. En el armado de esta red Wan se ha dispuesto utilizar
+para el direccionamiento IP la red 192.168.100.0/24 dividida en
+subredes con m&aacute;scara /29.</FONT></P>
+<P><FONT FACE="Arial">Cada una de las sucursales utilizar&aacute;
+para su direccionamiento IP interno una red /24 completa, del tipo
+10.0.n.0/24.</FONT></P>
+<P><FONT FACE="Arial">De este modo cada sucursal poseer&aacute; un
+enlace Wan (red 192.168.100.n/29) y una red interna (10.0.n.0/24).</FONT></P>
+<P><FONT FACE="Arial">La Direcci&oacute;n IP del enlace wan del
+router de la sucursal ser&aacute; la primera direcci&oacute;n
+utilizable de la red /29 su contraparte en la casa matr&iacute;z ser&aacute;
+la &uacute;ltima direcci&oacute;n utilizable de la red /29.</FONT></P>
+<P><FONT FACE="Arial">La direcci&oacute;n IP privada del router de la
+sucursal ser&aacute; la primer direcci&oacute;n utilizable de la red
+10.0.n.0/24.</FONT></P>
+<P><BR><BR>
+</P>
+<P><FONT FACE="Arial">La correspondencia de direcciones de enlaces y
+redes estar&aacute; dada por la siguiente regla:</FONT></P>
+<P><FONT FACE="Arial">Sucursal 1-&gt; Enlace Wan: Primer red
+192.168.100.n/29 -&gt; Direccionamiento privado: 10.0.1.0/24</FONT></P>
+<P><FONT FACE="Arial">Sucursal 2-&gt; Enlace Wan: Segunda red
+192.168.100.n/29 -&gt; Direccionamiento privado: 10.0.2.0/24</FONT></P>
+<P><FONT FACE="Arial">Sucursal 3-&gt; Enlace Wan: Tercer red
+192.168.100.n/29 -&gt; Direccionamiento privado: 10.0.3.0/24</FONT></P>
+<P><FONT FACE="Arial">Sucursal 4-&gt; Enlace Wan: Cuarta red
+192.168.100.n/29 -&gt; Direccionamiento privado: 10.0.4.0/24</FONT></P>
+<P><FONT FACE="Arial">Sucursal 5-&gt; Enlace Wan: Quinta red
+192.168.100.n/29 -&gt; Direccionamiento privado: 10.0.5.0/24</FONT></P>
+<P><FONT FACE="Arial">Sucursal 6-&gt; Enlace Wan: Sexta red
+192.168.100.n/29 -&gt; Direccionamiento privado: 10.0.6.0/24</FONT></P>
+<P><BR><BR>
+</P>
+<P><FONT FACE="Arial">Requerimientos</FONT></P>
+<P><FONT FACE="Arial">Deber&aacute; desarrollar todo el
+direccionamiento IP de las redes.</FONT></P>
+<P><FONT FACE="Arial">Implementar en el laboratorio un puesto de
+trabajo de la red privada y el router de la sucursal.</FONT></P>
+<P><FONT FACE="Arial">Aplicar las siguientes restricciones:</FONT></P>
+<UL>
+	<UL>
+		<UL>
+			<LI><P><FONT FACE="Arial">Todos los equipos pertecientes a </FONT>la
+			red privada solamente deberan poder acceder a los servicios de Web
+			y email (pop y smtp).</P>
+			<LI><P>Desde la red Wan no se debe poder acceder al
+			router-firewall.</P>
+		</UL>
+	</UL>
+</UL>
+<ul>
+  <ul>
+    <ul>
+      <li>
+        <p><font face="Arial">Levantar un servidor de Web y un servidor
+DNS en una m&aacute;quina de la red Interna.</font></p>
+      </li>
+      <li><font face="Arial">Realizar un NAT de los puertos de los
+servidores (Web y DNS) en el Firewall hacia la red Interna.<br>
+        </font></li>
+    </ul>
+  </ul>
+</ul>
+
+</BODY>
+</HTML>
